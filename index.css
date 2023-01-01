@@ -1,0 +1,243 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+/* First ITEM in list */
+.dropdown-toggle {
+  font-family: "Tajawal", sans-serif;
+  border: none;
+  background-color: transparent;
+}
+.dropdown-item {
+  color: white;
+}
+.dropdown-item:hover {
+  color: white;
+  background: linear-gradient(180deg, #834b9d, #844c9e);
+}
+.btn:hover {
+  color: #fccf07;
+  background-color: transparent;
+}
+.btn:first-child:active {
+  background-color: transparent;
+}
+.dropdown-menu {
+  border-radius: 15;
+  color: white;
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  background: #9d65b5;
+}
+/* NAV LIST */
+.nav {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.listItem {
+  color: white;
+  font-family: "Tajawal", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.listItem::after {
+  content: "|";
+  position: relative;
+  margin: 0 10px;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.699);
+}
+.listItem a {
+  text-decoration: none;
+  color: white;
+}
+.listItem a:hover {
+  color: #fccf07;
+}
+/* nav and logo wrapper */
+.nav-wrapper,
+.nav-wrapper-mobile {
+  align-items: center;
+  flex-direction: row-reverse;
+  width: 100%;
+  z-index: 3;
+  position: absolute;
+  top: 0px;
+  height: fit-content;
+}
+.nav-wrapper {
+  display: flex;
+}
+/* nav and logo wrapper mobile */
+.nav-wrapper-mobile {
+  display: none;
+}
+.nav-wrapper-mobile .logo {
+  width: 30%;
+}
+/* burger button  mobile */
+.burgerBTN {
+  margin-right: 15px;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+/* sideMenu mobile */
+.sideMenu {
+  backdrop-filter: blur(10px);
+  position: absolute;
+  z-index: 3;
+  height: 50%;
+  width: 100%;
+  transition: all 0.5s;
+  transform: translateY(-50vh);
+  display: flex;
+  flex-direction: column;
+}
+/* NAV LIST MOBILE */
+.sideMenu .nav {
+  align-items: flex-end;
+  flex-direction: column;
+}
+.sideMenu .listItem {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+.sideMenu .dropdown-toggle {
+  font-size: 1.2rem;
+}
+.sideMenu .dropdown-toggle::after {
+  vertical-align: 0em;
+}
+/* close menu */
+.exit {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
+}
+.animation {
+  transform: translateY(0);
+}
+/* CAROUSEL */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-wrapper {
+  position: relative;
+}
+.swiper-slide {
+  font-family: "8k9';;';''Tajawal", sans-serif;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.swiper-slide:before {
+  background: linear-gradient(180deg, #80469af0, #7d4295a8);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide .container {
+  position: absolute;
+  text-align: center;
+  z-index: 2;
+  font-family: "Tajawal", sans-serif;
+}
+
+.swiper-slide .container .subTitle {
+  color: #fccf07;
+  font-size: 22px;
+  font-weight: bolder;
+  margin-bottom: 5px;
+}
+.swiper-slide .container .Title {
+  color: #fffefe;
+  margin-top: 0;
+  font-size: 30px;
+  font-weight: bold;
+}
+.swiper-slide .container .description {
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+}
+/* CAROUSEL BUTTONS */
+.swiper-next {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #f55472;
+  right: 0;
+  top: 92%;
+  color: white;
+}
+.swiper-prev {
+  background-color: #fffefe;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  left: 0;
+  top: 92%;
+  color: black;
+}
+.pagination {
+  user-select: none;
+  position: absolute;
+  z-index: 3;
+  cursor: pointer;
+  width: fit-content;
+  height: 50px;
+  border: none;
+  padding: 0 15px;
+  font-family: "Tajawal", sans-serif;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 893px) {
+  .nav-wrapper {
+    display: none;
+  }
+  .nav-wrapper-mobile {
+    display: flex;
+  }
+  .listItem::after {
+    content: "";
+  }
+}
