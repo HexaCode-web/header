@@ -28,6 +28,9 @@ body {
   color: #fccf07;
   background-color: transparent;
 }
+.btn.show {
+  border: none;
+}
 .btn:first-child:active {
   background-color: transparent;
 }
